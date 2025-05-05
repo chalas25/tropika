@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre Nosotros - Tropika</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Pacifico&family=Rubik+Moonrocks&display=swap');
+
+    :root {
+      --primary: #ff5733;
+      --secondary: #ffa94d;
+      --accent: #4ecdc4;
+      --bg: #fff8f0;
+      --text: #2d2d2d;
+      --gradient: linear-gradient(135deg, #ff5733, #ffa94d, #4ecdc4);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(120deg, #fff8f0 0%, #ffefdd 100%);
+      color: var(--text);
+      background-image: url('https://www.transparenttextures.com/patterns/cream-dust.png');
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: var(--gradient);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      animation: fadeIn 1.5s ease-in-out;
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .logo {
+      max-width: 220px;
+      display: block;
+      margin: 0 auto 1rem;
+      filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.4));
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    h1 {
+      font-family: 'Rubik Moonrocks', cursive;
+      font-size: 4rem;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: var(--accent);
+      padding: 1rem;
+      gap: 2rem;
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #2d2d2d;
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 30px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      color: var(--primary);
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight {
+      color: var(--secondary);
+      font-weight: bold;
+    }
+
+    .equipo {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+
+    .miembro {
+      text-align: center;
+      width: 150px;
+      margin: 1rem;
+    }
+
+    .miembro img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .timeline {
+      margin-top: 4rem;
+      position: relative;
+      border-left: 4px solid var(--accent);
+      padding-left: 2rem;
+    }
+
+    .evento {
+      margin-bottom: 2rem;
+    }
+
+    .evento h4 {
+      margin: 0 0 0.5rem;
+      font-size: 1.3rem;
+      color: var(--primary);
+    }
+
+    .evento p {
+      margin: 0;
+    }
+
+    footer {
+      background: var(--gradient);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://raw.githubusercontent.com/chalas25/tropika/refs/heads/main/Untitled_Artwork.PNG" alt="Logo Tropika" class="logo">
+   
+    <p><em>Siente el ritmo, vive la cultura</em></p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="precios.html">Precios</a>
+    <a href="nosotros.html">Sobre Nosotros</a>
+    <a href="revista.html">Revista Tropika</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <section>
+    <h2>¿Quiénes Somos?</h2>
+    <p>En <span class="highlight">Tropika</span>, somos más que una marca: somos una celebración de la identidad, la calle y el talento local. Nacimos del deseo de rescatar y amplificar las voces del barrio, transformando la cultura popular en una experiencia viva, colorida y auténtica.</p>
+    <p>Desde revistas ilustradas y stickers, hasta eventos y productos exclusivos, trabajamos con artistas locales para llevar lo mejor del trópico urbano al mundo.</p>
+
+    <h2>El Equipo</h2>
+    <div class="equipo">
+      <div class="miembro">
+        <img src="https://raw.githubusercontent.com/chalas25/tropika/refs/heads/main/WhatsApp%20Image%202025-05-02%20at%2022.21.14_b38099bb.jpg" alt="Lia Chalas - Fundadora" />
+        <p><strong>Lia Chalas</strong><br/>Fundadora</p>
+      </div>
+      <div class="miembro">
+        <img src="https://raw.githubusercontent.com/chalas25/tropika/refs/heads/main/WhatsApp%20Image%202025-05-02%20at%2022.15.41_acfe097d.jpg" alt="Lia Rodríguez - Directora Creativa" />
+        <p><strong>Lia Rodríguez</strong><br/>Directora Creativa</p>
+      </div>
+      <div class="miembro">
+        <img src="https://raw.githubusercontent.com/chalas25/tropika/refs/heads/main/WhatsApp%20Image%202025-05-02%20at%2022.40.25_213641c5.jpg" alt="Laura Pérez - Arte & Diseño" />
+        <p><strong>Laura Pérez</strong><br/>Arte & Diseño</p>
+      </div>
+      <div class="miembro">
+        <img src="https://raw.githubusercontent.com/chalas25/tropika/refs/heads/main/WhatsApp%20Image%202025-05-02%20at%2022.14.44_c2120486.jpg" alt="Eduardo Toribio - Editorial Revista Tropika" />
+        <p><strong>Eduardo Toribio</strong><br/>Editorial Revista Tropika</p>
+      </div>
+      <div class="miembro">
+        <img src="https://raw.githubusercontent.com/chalas25/tropika/refs/heads/main/WhatsApp%20Image%202025-05-03%20at%2009.05.04_d4f30a20.jpg" alt="Jorge Erislander - Gerente de Marketing" />
+        <p><strong>Jorge Erislander</strong><br/>Gerente de Marketing</p>
+      </div>
+      <div class="miembro">
+        <img src="https://raw.githubusercontent.com/chalas25/tropika/refs/heads/main/WhatsApp%20Image%202025-05-02%20at%2022.54.35_e6e775fc.jpg" alt="Lil Núñez - Community Manager & Social Media" />
+        <p><strong>Lil Núñez</strong><br/>Community Manager & Social Media</p>
+      </div>
+      <div class="miembro">
+        <img src="https://raw.githubusercontent.com/chalas25/tropika/refs/heads/main/WhatsApp%20Image%202025-05-02%20at%2022.18.08_5d1cfdba.jpg" alt="Torres- Asistente Administrariva & Ejecutiva" />
+        <p><strong>Avril Torres</strong><br/>Asistente Administrariva & Ejecutiva</p>
+      </div>
+    </div>
+
+    <h2>Nuestra Historia</h2>
+    <div class="timeline">
+      <div class="evento">
+        <h4>2021 - El Inicio</h4>
+        <p>La idea de Tropika nace como un blog para celebrar la cultura dominicana.</p>
+      </div>
+      <div class="evento">
+        <h4>2022 - Primera Revista</h4>
+        <p>Lanzamos nuestra primera edición impresa con ilustraciones de artistas emergentes.</p>
+      </div>
+      <div class="evento">
+        <h4>2023 - Pedacito de Tierra</h4>
+        <p>Iniciamos la suscripción mensual con productos locales y colaboraciones exclusivas.</p>
+      </div>
+      <div class="evento">
+        <h4>2025 - Comunidad Global</h4>
+        <p>Nuestra comunidad crece más allá del Caribe, llevando nuestras raíces al mundo.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tropika. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
